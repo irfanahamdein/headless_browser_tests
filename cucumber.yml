@@ -1,0 +1,1 @@
+default: -r test_specs/engine/ -r test_specs/test_definition test_specs
