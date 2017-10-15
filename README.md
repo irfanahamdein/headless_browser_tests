@@ -8,7 +8,7 @@ lets sit and try headless_chrome in 10 minutes
 RVM is ruby version manager. We can install it
 
 ```bash
-$\curl -sSL https://get.rvm.io | bash -s stable --ruby
+$curl -sSL https://get.rvm.io | bash -s stable --ruby
 $rvm install 2.3.0
 $rvm use 2.3.0 --default
 ```
