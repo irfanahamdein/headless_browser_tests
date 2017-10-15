@@ -12,4 +12,5 @@ before_script:
 - sudo mv geckodriver /usr/local/bin/
 
 script:
+  - bundle install 
   - cucumber
