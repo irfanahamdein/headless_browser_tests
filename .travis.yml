@@ -10,7 +10,8 @@ before_script:
 - tar -xvzf geckodriver*
 - chmod +x geckodriver
 - sudo mv geckodriver /usr/local/bin/
+- gem install cucumber
 
 script:
 - bundle install
-- cucumber
+- bundle exec cucumber
