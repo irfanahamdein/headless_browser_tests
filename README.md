@@ -1,6 +1,8 @@
 # headless browser tests
 lets sit and try headless browsers for chrome and firefox in 10 minutes
 
+[![Build Status](https://travis-ci.org/notimewaste/chrome_headless_test.svg?branch=master)](https://travis-ci.org/notimewaste/chrome_headless_test)
+
 ## SetUp
 
 1) You must have chrome 59+ installed in your system.
