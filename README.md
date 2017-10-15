@@ -1,6 +1,8 @@
 # headless browser tests
 lets sit and try headless browsers for chrome and firefox in 10 minutes
 
+[![Build Status](https://travis-ci.org/notimewaste/chrome_headless_test.svg?branch=master)](https://travis-ci.org/notimewaste/chrome_headless_test)
+
 ## SetUp
 
 1) You must have chrome 59+ installed in your system.
@@ -36,6 +38,13 @@ $sudo mv geckodriver /usr/local/bin/
 ```
 
 ## Run Test
+
+### To run tests on headless chrome
 ```bash
-$cucumber
+$bundle exec cucumber DRIVER=headless_chrome
+```
+
+### To run tests on headless firefox
+```bash
+$bundle exec cucumber DRIVER=headless_firefox
 ```
