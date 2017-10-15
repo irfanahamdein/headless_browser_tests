@@ -4,6 +4,7 @@ rvm:
 
 addons:
   firefox: "56.0"
+  chrome: "60.0"
 
 before_script:
 - wget https://github.com/mozilla/geckodriver/releases/download/v0.19.0/geckodriver-v0.19.0-linux64.tar.gz
@@ -11,7 +12,9 @@ before_script:
 - chmod +x geckodriver
 - sudo mv geckodriver /usr/local/bin/
 - gem install cucumber
+- gem install bundler
 
 script:
 - bundle install
-- bundle exec cucumber
+- bundle exec cucumber DRIVER=headless_chrome
+- bundle exec cucumber DRIVER=headless_firefox

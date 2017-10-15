@@ -35,7 +35,16 @@ end
 
 Capybara.configure do |config|
   config.run_server = false
-  config.default_driver = :headless_firefox
+
+  case ENV['DRIVER']
+      when "headless_chrome"
+        config.default_driver = :headless_chrome
+      when "headless_firefox"
+        config.default_driver = :headless_firefox
+      else
+        config.default_driver = :headless_firefox
+      end
+
 end
 
 Capybara.javascript_driver = :headless_firefox
