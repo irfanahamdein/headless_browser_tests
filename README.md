@@ -48,3 +48,8 @@ $bundle exec cucumber DRIVER=headless_chrome
 ```bash
 $bundle exec cucumber DRIVER=headless_firefox
 ```
+
+### To run tests on headless firefox with verbose logging
+```bash
+$bundle exec cucumber DRIVER=headless_firefox DEBUG=true
+```
