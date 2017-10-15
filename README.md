@@ -38,6 +38,13 @@ $sudo mv geckodriver /usr/local/bin/
 ```
 
 ## Run Test
+
+### To run tests on headless chrome
 ```bash
-$cucumber
+$bundle exec cucumber DRIVER=headless_chrome
+```
+
+### To run tests on headless firefox
+```bash
+$bundle exec cucumber DRIVER=headless_firefox
 ```

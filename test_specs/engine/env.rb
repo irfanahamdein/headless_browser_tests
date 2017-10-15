@@ -1,6 +1,8 @@
 require 'selenium-webdriver'
 require 'capybara/cucumber'
 require 'rspec/expectations'
+require 'capybara-screenshot/cucumber'
+require 'pry'
 
 Capybara.register_driver(:headless_chrome) do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
@@ -31,6 +33,14 @@ Capybara.register_driver :chrome do |app|
 
 Capybara.register_driver :firefox do |app|
     Capybara::Selenium::Driver.new(app, browser: :firefox)
+end
+
+Capybara::Screenshot.register_driver(:headless_firefox) do |driver, path|
+  driver.browser.save_screenshot path
+end
+
+Capybara::Screenshot.register_driver(:headless_chrome) do |driver, path|
+  driver.browser.save_screenshot path
 end
 
 Capybara.configure do |config|
