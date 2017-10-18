@@ -1,7 +1,7 @@
 # headless browser tests
 lets sit and try headless browsers for chrome and firefox in 10 minutes
 
-[![Build Status](https://travis-ci.org/notimewaste/chrome_headless_test.svg?branch=master)](https://travis-ci.org/notimewaste/chrome_headless_test)
+[![Build Status](https://travis-ci.org/upgrad/headless_browser_tests.svg?branch=master)](https://travis-ci.org/upgrad/headless_browser_tests)
 
 ## SetUp
 

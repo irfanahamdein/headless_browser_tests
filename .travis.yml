@@ -17,4 +17,4 @@ before_script:
 script:
 - bundle install
 - bundle exec cucumber DRIVER=headless_chrome
-- bundle exec cucumber DRIVER=headless_firefox DEBUG=true
+- bundle exec cucumber DRIVER=headless_firefox
