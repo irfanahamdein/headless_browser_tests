@@ -4,7 +4,7 @@ end
 
 When(/^I search on youtube with term "([^"]*)"$/) do |term|
      fill_in('search_query', :with => term)
-     click_button('search-icon-legacy')
+     find('#search-icon-legacy').click
 end
 
 Then(/^I should see video with name "([^"]*)"$/) do |text|
