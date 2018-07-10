@@ -5,9 +5,34 @@ lets sit and try headless browsers for chrome and firefox in 10 minutes
 
 ## SetUp
 
-1) You must have chrome 59+ installed in your system.
-2) You must have chrome 56+ installed in your system.
-3) Install ruby 2.3.0 or above with rvm
+1) Installing Browser in your system
+
+A.On mac
+
+* Install chrome 59+
+* Install firefox 56+
+
+B.On Ubuntu server
+
+* Install firefox
+
+```
+$ sudo apt-get update
+$ wget https://ftp.mozilla.org/pub/firefox/releases/56.0/linux-x86_64/en-US/firefox-56.0.tar.bz2
+$ tar -xjf firefox-56.0.tar.bz2
+$ sudo mv firefox /opt/firefox56
+$ sudo ln -s /opt/firefox56/firefox-bin /usr/bin/firefox
+```
+
+* Install chrome
+
+```
+$ export CHROME_BIN=/usr/bin/google-chrome
+$ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+$ sudo apt-get install google-chrome-stable
+```
+
+2) Install ruby 2.3.0 or above with rvm
 RVM is ruby version manager. We can install it
 
 ```bash
@@ -20,7 +45,7 @@ On ubuntu
 $sudo apt-get install ruby
 ```
 
-4) Install bundler
+3) Install bundler
 ```bash
 $gem install bundler
 ```
@@ -28,7 +53,7 @@ clone the repo and run bundle install ,all dependencies will be added
 ```bash
 $bundle install
 ```
-5)Install geckodriver
+4)Install geckodriver
 
 ```bash
 $wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.19.0-linux64.tar.gz
