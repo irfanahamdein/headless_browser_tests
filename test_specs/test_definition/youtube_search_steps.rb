@@ -8,5 +8,6 @@ When(/^I search on youtube with term "([^"]*)"$/) do |term|
 end
 
 Then(/^I should see video with name "([^"]*)"$/) do |text|
+     binding.pry
      page.should have_content(text)
 end
