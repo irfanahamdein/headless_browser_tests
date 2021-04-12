@@ -4,6 +4,12 @@ require 'rspec/expectations'
 require 'capybara-screenshot/cucumber'
 require 'pry'
 
+require 'webdrivers/chromedriver'
+require 'webdrivers/geckodriver'
+require 'webdrivers/iedriver'
+require 'webdrivers/edgedriver'
+
+
 Capybara.register_driver(:headless_chrome) do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { args: %w[headless no-sandbox disable-gpu] }
@@ -52,7 +58,7 @@ Capybara.configure do |config|
       when "headless_firefox"
         config.default_driver = :headless_firefox
       else
-        config.default_driver = :headless_firefox
+        config.default_driver = :chrome
       end
 
 end
