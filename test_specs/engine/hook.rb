@@ -4,6 +4,6 @@ After do |scenario|
       abort "saving screenshot after scenario : #{scenario.name} failed"
   else
     Capybara::Screenshot.screen_shot_and_save_page
-    puts "saving screenshot after scenario : #{scenario.name} passed"
+    log("saving screenshot after scenario : #{scenario.name} passed") 
    end
 end
